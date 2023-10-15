@@ -5,9 +5,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { ShowproducttypeComponent } from './components/showproducttype/showproducttype.component';
 import { ProducttypeDetailComponent } from './components/producttype-detail/producttype-detail.component';
 import { CreateproducttypeComponent } from './components/createproducttype/createproducttype.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { CreateproductComponent } from './components/createproduct/createproduct.component';
 import { HomeComponent } from './components/home/home.component';
-import { GoodsComponent } from './components/goods/goods.component';
 import { HomeuserComponent } from './components/homeuser/homeuser.component';
 import { UsersigninComponent } from './components/usersignin/usersignin.component';
 import { UsersignupComponent } from './components/usersignup/usersignup.component';
@@ -15,12 +14,13 @@ import { AdminsigninComponent } from './components/adminsignin/adminsignin.compo
 import { HomeadminComponent } from './components/homeadmin/homeadmin.component';
 import { ShowproductComponent } from './components/showproduct/showproduct.component';
 import { UpdataproductComponent } from './components/updataproduct/updataproduct.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: 'home', pathMatch:'full' },
-  { path: 'products/goods/:id', component: GoodsComponent },
+  { path: 'products/product/:id', component: ProductDetailsComponent },
   { path: 'showproducttype', component: ShowproducttypeComponent },
   { path: 'showproducttype/producttype/:id', component: ProducttypeDetailComponent },
   { path: 'showproducttype/createproducttype', component: CreateproducttypeComponent},
@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: 'home/admin', component: HomeadminComponent},
   { path: 'showproduct', component: ShowproductComponent},
   { path: 'showproduct/product/:id', component: UpdataproductComponent},
+  { path: 'showproduct/createproduct', component: CreateproductComponent}
 ];
 
 @NgModule({

@@ -10,7 +10,6 @@ import { ProductsComponent } from './components/products/products.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './components/home/home.component';
-import { GoodsComponent } from './components/goods/goods.component';
 import { SearchComponent } from './components/search/search.component';
 import { ShowproducttypeComponent } from './components/showproducttype/showproducttype.component';
 import { ProducttypeDetailComponent } from './components/producttype-detail/producttype-detail.component';
@@ -27,6 +26,7 @@ import { UsermenuComponent } from './components/usermenu/usermenu.component';
 import { ShowproductComponent } from './components/showproduct/showproduct.component';
 import { UpdataproductComponent } from './components/updataproduct/updataproduct.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CreateproductComponent } from './components/createproduct/createproduct.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,6 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     ProductsComponent,
     MenuComponent,
     HomeComponent,
-    GoodsComponent,
     SearchComponent,
     ShowproducttypeComponent,
     ProducttypeDetailComponent,
@@ -48,7 +47,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     UsermenuComponent,
     ShowproductComponent,
     UpdataproductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CreateproductComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,14 @@
     </button>
 
     <!-- Navbar brand -->
-    <a class="cus-white-text" class="btn btn-danger float-right" (click)="SignOut()">Sign Out</a>
+    <div>
+      <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#myModal">
+        <i class="fa fa-shopping-cart" aria-hidden="true">Cart</i>
+        <span class="badge badge-info">1</span>
+      </a>
+
+      <a class="cus-white-text" class="btn btn-danger float-right" (click)="SignOut()">Sign Out</a>
+    </div>
   
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
