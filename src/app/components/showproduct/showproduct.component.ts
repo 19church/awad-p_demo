@@ -2,14 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
 import { ProductTypeService } from 'src/app/services/product-type.service';
 
-
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  selector: 'app-showproduct',
+  templateUrl: './showproduct.component.html',
+  styleUrls: ['./showproduct.component.css']
 })
-export class ProductsComponent implements OnInit {
-
+export class ShowproductComponent implements OnInit{
   List_products: any;
 
   searchText: string = '';
@@ -86,18 +84,4 @@ export class ProductsComponent implements OnInit {
       console.log(err);
     }
   }
-
-  // // rest from service
-  // getAllDummy() {
-  //   this.productsService.restAllProducts().subscribe({
-  //     next: (response) => {
-  //       this.List_products = response
-  //       console.log("dummy");
-  //       console.log(this.List_products);
-  //     },
-  //     error: (error) => {
-  //       console.log(error);
-  //     }
-  //   });
-  // }
 }

@@ -17,6 +17,15 @@ import { ProducttypeDetailComponent } from './components/producttype-detail/prod
 import { CreateproducttypeComponent } from './components/createproducttype/createproducttype.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { HomeuserComponent } from './components/homeuser/homeuser.component';
+import { HomeadminComponent } from './components/homeadmin/homeadmin.component';
+import { UsersigninComponent } from './components/usersignin/usersignin.component';
+import { UsersignupComponent } from './components/usersignup/usersignup.component';
+import { AdminsigninComponent } from './components/adminsignin/adminsignin.component';
+import { AdminmenuComponent } from './components/adminmenu/adminmenu.component';
+import { UsermenuComponent } from './components/usermenu/usermenu.component';
+import { ShowproductComponent } from './components/showproduct/showproduct.component';
+import { UpdataproductComponent } from './components/updataproduct/updataproduct.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +37,16 @@ import { MaterialModule } from './material/material.module';
     SearchComponent,
     ShowproducttypeComponent,
     ProducttypeDetailComponent,
-    CreateproducttypeComponent
+    CreateproducttypeComponent,
+    HomeuserComponent,
+    HomeadminComponent,
+    UsersigninComponent,
+    UsersignupComponent,
+    AdminsigninComponent,
+    AdminmenuComponent,
+    UsermenuComponent,
+    ShowproductComponent,
+    UpdataproductComponent
   ],
   imports: [
     BrowserModule,

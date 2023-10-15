@@ -1,5 +1,6 @@
+<app-adminmenu></app-adminmenu>
+
 <!-- [ngStyle]="{'background-color': 'rgb(240, 227, 165)'}" -->
-<app-usermenu></app-usermenu>
 
 <div class="container-fluid" style="background-color:#ffe092;">
     <div class="row">
@@ -35,7 +36,7 @@
                             <tbody>
                                 <ng-container *ngFor="let item of List_products;">
                                     <tr *ngIf="(item.Product_Type == type.ProductType_Name) && SeachMatch(item)" 
-                                    routerLink="/products/goods/{{item._id}}">
+                                    routerLink="/showproduct/product/:id{{item._id}}">
                                             <td>{{item.Product_Name}}</td>
                                             <td><p [innerHTML]="isCheck(item.Product_IsHot)"></p></td>
                                             <td><p [innerHTML]="isCheck(item.Product_IsCold)"></p></td>

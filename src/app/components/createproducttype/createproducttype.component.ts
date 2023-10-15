@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductTypeService } from 'src/app/services/product-type.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-createproducttype',
@@ -14,7 +15,8 @@ export class CreateproducttypeComponent implements OnInit{
   })
 
   constructor(
-    private productTypeService: ProductTypeService
+    private productTypeService: ProductTypeService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -25,6 +27,7 @@ export class CreateproducttypeComponent implements OnInit{
     this.productTypeService.createProductType(this.productTypeData.value).subscribe(
       data => {
         console.log(data)
+        this.router.navigate(['/showproducttype']);
       },
       err => {
         console.log(err);

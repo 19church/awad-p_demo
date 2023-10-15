@@ -19,4 +19,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public onSidenavClick(): void {
+    this.isMenuOpen = false;
+  }
 }

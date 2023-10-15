@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductTypeService } from 'src/app/services/product-type.service';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -19,6 +19,7 @@ export class ProducttypeDetailComponent implements OnInit{
   constructor(
     private productTypeService: ProductTypeService,
     private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {
     this.getOneProductType();
   }
@@ -48,6 +49,7 @@ export class ProducttypeDetailComponent implements OnInit{
     this.productTypeService.updateProductType(product_id, this.productTypeData.value).subscribe(
       data => {
         console.log(data)
+        this.router.navigate(['/showproducttype']);
       },
       err => {
         console.log(err);
@@ -61,6 +63,8 @@ export class ProducttypeDetailComponent implements OnInit{
       this.productTypeService.deleteProductType(product_id).subscribe(
         data => {
           console.log(data)
+          this.router.navigate(['/showproducttype']);
+
         },
         err => {
           console.log(err);

@@ -8,6 +8,13 @@ import { CreateproducttypeComponent } from './components/createproducttype/creat
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { GoodsComponent } from './components/goods/goods.component';
+import { HomeuserComponent } from './components/homeuser/homeuser.component';
+import { UsersigninComponent } from './components/usersignin/usersignin.component';
+import { UsersignupComponent } from './components/usersignup/usersignup.component';
+import { AdminsigninComponent } from './components/adminsignin/adminsignin.component';
+import { HomeadminComponent } from './components/homeadmin/homeadmin.component';
+import { ShowproductComponent } from './components/showproduct/showproduct.component';
+import { UpdataproductComponent } from './components/updataproduct/updataproduct.component';
 
 const routes: Routes = [
   { path: 'products', component: ProductsComponent },
@@ -16,7 +23,14 @@ const routes: Routes = [
   { path: 'products/goods/:id', component: GoodsComponent },
   { path: 'showproducttype', component: ShowproducttypeComponent },
   { path: 'showproducttype/producttype/:id', component: ProducttypeDetailComponent },
-  { path: 'showproducttype/createproducttype', component: CreateproducttypeComponent}
+  { path: 'showproducttype/createproducttype', component: CreateproducttypeComponent},
+  { path: 'home/usersignin', component: UsersigninComponent},
+  { path: 'home/usersignup', component: UsersignupComponent},
+  { path: 'home/user', component: HomeuserComponent},
+  { path: 'home/adminsignin', component: AdminsigninComponent},
+  { path: 'home/admin', component: HomeadminComponent},
+  { path: 'showproduct', component: ShowproductComponent},
+  { path: 'showproduct/product/:id', component: UpdataproductComponent},
 ];
 
 @NgModule({
