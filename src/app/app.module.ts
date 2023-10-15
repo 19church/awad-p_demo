@@ -26,6 +26,7 @@ import { AdminmenuComponent } from './components/adminmenu/adminmenu.component';
 import { UsermenuComponent } from './components/usermenu/usermenu.component';
 import { ShowproductComponent } from './components/showproduct/showproduct.component';
 import { UpdataproductComponent } from './components/updataproduct/updataproduct.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { UpdataproductComponent } from './components/updataproduct/updataproduct
     AdminmenuComponent,
     UsermenuComponent,
     ShowproductComponent,
-    UpdataproductComponent
+    UpdataproductComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
