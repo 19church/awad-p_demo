@@ -37,12 +37,10 @@ export class CreateproductComponent implements OnInit{
     private productsService: ProductsService,
     private productTypeService: ProductTypeService
   ) {
-    console.log("hgj")
+
   }
 
   ngOnInit(): void {
-    // this.productTypeService.restAllProductTypes().subscribe(data => {this.productTypes = data;});
-    console.log("mgjhjhh")
     this.getAllProductTypes();
     console.log(this.productTypes)
   }
@@ -73,6 +71,12 @@ export class CreateproductComponent implements OnInit{
 
   createProduct() {
     console.log(this.products.value)
+    console.log(typeof this.products.controls.Product_Price_Hot.value)
+    if (Number(this.products.controls.Product_Price_Hot.value) < 0 || Number(this.products.controls.Product_Price_Cold.value) < 0 || Number(this.products.controls.Product_Price_Frappe.value) < 0) {
+      alert("Price can't be negative")
+      return
+    }
+    
     this.productsService.createProduct(this.products.value).subscribe(
       data => {
         console.log(data)
@@ -80,6 +84,7 @@ export class CreateproductComponent implements OnInit{
         this.previewLoaded = false;
       },
       err => {
+        alert("Input is invalid");
         console.log(err);
       }
     );
@@ -104,9 +109,9 @@ export class CreateproductComponent implements OnInit{
     if (value === true) {
       this.showhot = value;
     } else {
-      this.products.controls.Product_Detail_Hot.setValue('X');
+      this.products.controls.Product_Detail_Hot.setValue('None');
       this.products.controls.Product_Price_Hot.setValue('0');
-      this.products.controls.Product_Img_Hot.setValue('X');
+      this.products.controls.Product_Img_Hot.setValue('None');
     }
   }
 
@@ -114,9 +119,9 @@ export class CreateproductComponent implements OnInit{
     if (value === true) {
       this.showcold = value;
     } else {
-      this.products.controls.Product_Detail_Cold.setValue('X');
+      this.products.controls.Product_Detail_Cold.setValue('None');
       this.products.controls.Product_Price_Cold.setValue('0');
-      this.products.controls.Product_Img_Cold.setValue('X');
+      this.products.controls.Product_Img_Cold.setValue('None');
     }
   }
 
@@ -124,10 +129,20 @@ export class CreateproductComponent implements OnInit{
     if (value === true) {
       this.showfrappe = value;
     } else {
-      this.products.controls.Product_Detail_Frappe.setValue('X');
+      this.products.controls.Product_Detail_Frappe.setValue('None');
       this.products.controls.Product_Price_Frappe.setValue('0');
-      this.products.controls.Product_Img_Frappe.setValue('X');
+      this.products.controls.Product_Img_Frappe.setValue('None');
     }
+  }
+
+  nonNegativeNumberValidator(control: FormControl) {
+    const value = control.value;
+  
+    if (value === null || value === undefined || value < 0) {
+      return { nonNegative: true };
+    }
+  
+    return null;
   }
 
 }

@@ -24,9 +24,9 @@ import { AdminsigninComponent } from './components/adminsignin/adminsignin.compo
 import { AdminmenuComponent } from './components/adminmenu/adminmenu.component';
 import { UsermenuComponent } from './components/usermenu/usermenu.component';
 import { ShowproductComponent } from './components/showproduct/showproduct.component';
-import { UpdataproductComponent } from './components/updataproduct/updataproduct.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CreateproductComponent } from './components/createproduct/createproduct.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -46,9 +46,9 @@ import { CreateproductComponent } from './components/createproduct/createproduct
     AdminmenuComponent,
     UsermenuComponent,
     ShowproductComponent,
-    UpdataproductComponent,
     ProductDetailsComponent,
-    CreateproductComponent
+    CreateproductComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,

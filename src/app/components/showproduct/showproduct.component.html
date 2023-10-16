@@ -34,7 +34,7 @@
                             <tbody>
                                 <ng-container *ngFor="let item of List_products;">
                                     <tr *ngIf="(item.Product_Type == type.ProductType_Name) && SeachMatch(item)" 
-                                    routerLink="/showproduct/product/:id{{item._id}}">
+                                    routerLink="/showproduct/product/{{item._id}}">
                                             <td>{{item.Product_Name}}</td>
                                             <td><p [innerHTML]="isCheck(item.Product_IsHot)"></p></td>
                                             <td><p [innerHTML]="isCheck(item.Product_IsCold)"></p></td>

@@ -13,8 +13,8 @@ import { UsersignupComponent } from './components/usersignup/usersignup.componen
 import { AdminsigninComponent } from './components/adminsignin/adminsignin.component';
 import { HomeadminComponent } from './components/homeadmin/homeadmin.component';
 import { ShowproductComponent } from './components/showproduct/showproduct.component';
-import { UpdataproductComponent } from './components/updataproduct/updataproduct.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
 
 const routes: Routes = [
   { path: 'products', component: ProductsComponent },
@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'home/adminsignin', component: AdminsigninComponent},
   { path: 'home/admin', component: HomeadminComponent},
   { path: 'showproduct', component: ShowproductComponent},
-  { path: 'showproduct/product/:id', component: UpdataproductComponent},
+  { path: 'showproduct/product/:id', component: EditProductComponent},
   { path: 'showproduct/createproduct', component: CreateproductComponent}
 ];
 

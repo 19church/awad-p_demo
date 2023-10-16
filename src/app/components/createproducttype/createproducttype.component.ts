@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductTypeService } from 'src/app/services/product-type.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class CreateproducttypeComponent implements OnInit{
 
   productTypeData = new FormGroup({
-    ProductType_Name: new FormControl('')
+    ProductType_Name: new FormControl('', [Validators.required])
   })
 
   constructor(
