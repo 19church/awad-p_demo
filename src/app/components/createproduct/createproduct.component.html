@@ -23,7 +23,7 @@
 
                         <div class="form-group">
                             <h5>ProductType</h5>
-                            <select class="form-control" formControlName='Product_Type'>
+                            <select class="form-control" formControlName='Product_Type' (click)="testProductType()">
                                 <option value="" disabled selected>Select a product</option>
                                 <option *ngFor="let item of productTypes" [value]="item.ProductType_Name">
                                     {{item.ProductType_Name}}

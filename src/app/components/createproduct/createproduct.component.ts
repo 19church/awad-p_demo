@@ -42,7 +42,6 @@ export class CreateproductComponent implements OnInit{
 
   ngOnInit(): void {
     this.getAllProductTypes();
-    console.log(this.productTypes)
   }
 
   onChangeImg(e:any){
@@ -143,6 +142,11 @@ export class CreateproductComponent implements OnInit{
     }
   
     return null;
+  }
+
+  testProductType() {
+    this.getAllProductTypes();
+    console.log(this.productTypes)
   }
 
 }

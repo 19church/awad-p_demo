@@ -21,7 +21,6 @@ export class ShowproductComponent implements OnInit{
     private productTypeService: ProductTypeService,
     )
     {
-      this.getAllProducts();
       this.getAllProductTypes();
     }
   ngOnInit(): void {
@@ -74,7 +73,7 @@ export class ShowproductComponent implements OnInit{
       this.productTypeService.restAllProductTypes().subscribe(
         data => {
           this.productTypes = data;
-          return data;
+          this.getAllProducts();
         },
         err => {
           console.log(err);
